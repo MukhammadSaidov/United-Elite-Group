@@ -1,0 +1,235 @@
+.main {
+    cursor: pointer;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    position: absolute;
+    inset: 0px;
+}
+
+.main__item {
+    position: absolute;
+    inset: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+.press__img, .main, .view__btn {
+    transition: .2s linear;
+}
+
+.container:hover .press__img {
+    transform: scale(1.2);
+}
+
+.container:hover .main {
+    display: block;
+}
+
+.view__btn:hover {
+    border: 1px solid #003F79;
+    background-color: #003F79;
+    color: #fff;
+}
+
+
+
+
+
+/* Portfolio Content */
+
+.ContainerItem{
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: space-between;
+    width: 50%;
+}
+.Scrollimg{
+    transition: .1s linear;
+    width:100%;
+}
+.CardImg{
+    overflow: hidden;
+}
+.CardImg img{
+    transform: scale(1.05);
+
+}
+.CardImg:hover img{
+    transform: scale(1.1);
+    background-color: red;
+}
+@media screen and (min-width:320px) and (max-width:429px) {
+    .BoxMap{
+        height: 400px;
+        width: 100%;
+        margin: 70px 0px 50px 0px ;
+    }
+    .ContainerItem{
+        display: flex;
+        width: 90%;
+        grid-gap: 90px;
+        justify-content: center;
+        align-items: center;
+    }
+    .Card{
+        height: 400px;
+        width: 300px;
+    }
+    .CardImg{
+        height: 380px;
+        width: 100%;
+    }
+    .Scrollimg{
+        transition: .1s linear;
+        width: 100%;
+        height: 100%;
+    }
+}
+@media screen and (min-width:430px) and (max-width:719px) {
+    .BoxMap{
+        height: 400px;
+        width: 70%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .Scrollimg{
+        transition: .1s linear;
+        width: 100%;
+        height: 100%;
+    }
+    .ContainerItem{
+        display: flex;
+        width: 70%;
+        grid-gap: 90px;
+        justify-content: center;
+        align-items: center;
+    }
+    .Card{
+        height: 500px;
+        width: 400px;
+    }
+    .CardImg{
+        height: 470px;
+        width: 100%;
+    }
+}
+@media screen and (min-width:720px) and (max-width:1079px) {
+    .BoxMap{
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        padding-top: 133px;
+        width: 45%;
+        margin-top: -110px;
+    }
+    .ContainerItem{
+        grid-gap: 20px;
+    }
+}
+@media screen and (min-width:1080px) and (max-width:1279px) {
+    .BoxMap{
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        padding-top: 160px;
+        width: 45%;
+        margin-top: -155px;
+    }
+    .ContainerItem{
+        grid-gap: 25px;
+    }
+}
+@media screen and (min-width:1280px) and (max-width:1559px) {
+    .BoxMap{
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        padding-top: 163px;
+        width: 45%;
+        margin-top: -155px;
+    }
+    .ContainerItem{
+        grid-gap: 30px;
+    }
+}
+@media screen and (min-width:1560px) and (max-width:1919px) {
+    .BoxMap{
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        padding-top: 163px;
+        width: 45%;
+        margin-top: -155px;
+    }
+    .ContainerItem{
+        grid-gap: 30px;
+    }
+}
+@media screen and (min-width:1920px) {
+    .BoxMap{
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        padding-top: 160px;
+        width: 45%;
+        margin-top: -155px;
+    }
+    .ContainerItem{
+        grid-gap: 30px;
+    }
+}
+
+
+/* PortFolio Filter */
+@keyframes DrawerAllOn {
+    0% { display: none;}
+    5% {height: 50px ;}
+    15%{height: 100px;}
+    20%{height: 150px;}
+    25%{height: 200px;}
+    30%{height: 250px;}
+    35%{height: 300px;}
+    40%{height: 350px;}
+    45%{height: 400px;}
+    50%{height: 450px;}
+    55%{height: 500px;}
+    60%{height: 550px;}
+    65%{height: 600px;}
+    70%{height: 650px;}
+}
+.AllOn{
+    animation-name: DrawerAllOn;
+    animation-duration: 0.2s;
+    height: auto;
+}
+@keyframes DrawerAllOff {
+    0%{height: auto;}
+    5%{height: 650px;}
+    10%{height: 600px;}
+    15%{height: 550px;}
+    20%{height: 500px;}
+    25%{height: 450px;}
+    30%{height: 400px;}
+    35%{height: 350px;}
+    40%{height: 300px;}
+    45%{height: 250px;}
+    50%{height: 200px;}
+    55%{height: 150px;}
+    60%{height: 100px;}
+    65%{height: 50px;}
+    70%{ height: 0px;}
+    100%{display: none;}
+}
+.AllOff{
+    animation-name: DrawerAllOff;
+    animation-duration: 0.3s;
+    display: none;
+}
